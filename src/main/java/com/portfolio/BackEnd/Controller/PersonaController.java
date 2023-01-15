@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "https://portfolioalancoelho.web.app/portfolio")
-//@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired
     IPersonaService ipersonaService;
