@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Experiencia {
@@ -13,14 +14,20 @@ public class Experiencia {
     private String nombreE;
     private String descripcionE;
 
+    private Date fechaInicio;
+
+    private Date fechaFin;
+
     //Constructores
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE) {
+    public Experiencia(String nombreE, String descripcionE, Date fechaInicio, Date fechaFin) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
     }
 
     //Getters and setters
@@ -49,5 +56,20 @@ public class Experiencia {
         this.descripcionE = descripcionE;
     }
 
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
 }
 

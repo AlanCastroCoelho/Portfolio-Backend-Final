@@ -25,6 +25,10 @@ public class SProyectos {
         return rProyectos.findById(id);
     }
 
+    public boolean existsById(int id){
+        return rProyectos.existsById(id);
+    }
+
     public Optional<Proyectos> getByNmbreP(String nombreP){
         return rProyectos.findByNombreP(nombreP);
     }
@@ -37,9 +41,7 @@ public class SProyectos {
         rProyectos.deleteById(id);
     }
 
-    public boolean existsById(int id){
-        return rProyectos.existsById(id);
-    }
+
 
     public boolean existsByNombreP(String nombreP){
         return rProyectos.existsByNombreP(nombreP);

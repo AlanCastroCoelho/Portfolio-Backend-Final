@@ -18,14 +18,17 @@ public class dtoPersona {
 
     private String sobreMi;
 
+    private String titulo;
+
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String img, String sobreMi) {
+    public dtoPersona(String nombre, String apellido, String img, String sobreMi, String titulo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.sobreMi = sobreMi;
+        this.titulo = titulo;
     }
 
     public String getNombre() {
@@ -34,6 +37,14 @@ public class dtoPersona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getApellido() {

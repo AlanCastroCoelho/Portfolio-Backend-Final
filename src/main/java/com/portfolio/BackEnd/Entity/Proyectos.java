@@ -75,7 +75,7 @@ public class Proyectos {
         return descripcionP;
     }
 
-    public void setDescripcionP(String descripcionE) {
+    public void setDescripcionP(String descripcionP) {
         this.descripcionP = descripcionP;
     }
 

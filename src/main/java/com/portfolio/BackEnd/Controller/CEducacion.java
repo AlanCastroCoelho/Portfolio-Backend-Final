@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://portfolioalancoelho.web.app")
+//@CrossOrigin(origins = "https://portfolioalancoelho.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/educacion")
 public class CEducacion {
 
@@ -54,7 +55,7 @@ public class CEducacion {
         }
 
         Educacion educacion = new Educacion(
-                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE(),dtoeducacion.getFechaInicio(),dtoeducacion.getFechaFin()
         );
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
@@ -77,6 +78,8 @@ public class CEducacion {
 
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
+        educacion.setFechaInicio(dtoeducacion.getFechaInicio());
+        educacion.setFechaInicio(dtoeducacion.getFechaFin());
 
         sEducacion.save(educacion);
 

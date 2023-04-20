@@ -55,7 +55,7 @@ public class dtoProyectos {
         return nombreP;
     }
 
-    public void setNombreP(String nombreE) {
+    public void setNombreP(String nombreP) {
         this.nombreP = nombreP;
     }
 
@@ -63,7 +63,7 @@ public class dtoProyectos {
         return descripcionP;
     }
 
-    public void setDescripcionP(String descripcionE) {
+    public void setDescripcionP(String descripcionP) {
         this.descripcionP = descripcionP;
     }
 

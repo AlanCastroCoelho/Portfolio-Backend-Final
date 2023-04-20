@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://portfolioalancoelho.web.app")
+//@CrossOrigin(origins = "https://portfolioalancoelho.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/proyectos")
 public class CProyectos {
 
@@ -23,12 +24,12 @@ public class CProyectos {
     SProyectos sProyectos;
 
     @GetMapping("/lista")
-    public ResponseEntity<List<Educacion>> list(){
+    public ResponseEntity<List<Proyectos>> list(){
         List<Proyectos> list = sProyectos.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     @GetMapping("/detail/{id}")
-    public ResponseEntity<Educacion> getById(@PathVariable("id")int id){
+    public ResponseEntity<Proyectos> getById(@PathVariable("id")int id){
         if(!sProyectos.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
         }
@@ -57,7 +58,7 @@ public class CProyectos {
 
         Proyectos proyectos = new Proyectos(
                 dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP(), dtoproyectos.getUrlImg(),
-                dtoproyectos.getUrlRepo(),dtoproyectos.getUrlRepo()
+                dtoproyectos.getUrlRepo(),dtoproyectos.getUrlLiveDemo()
         );
         sProyectos.save(proyectos);
         return new ResponseEntity(new Mensaje("Proyecto Creado"), HttpStatus.OK);
