@@ -79,7 +79,7 @@ public class CEducacion {
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
         educacion.setFechaInicio(dtoeducacion.getFechaInicio());
-        educacion.setFechaInicio(dtoeducacion.getFechaFin());
+        educacion.setFechaFin(dtoeducacion.getFechaFin());
 
         sEducacion.save(educacion);
 
