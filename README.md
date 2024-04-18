@@ -12,6 +12,7 @@ Argentina Programa - #YoProgramo. Para dirigirte al repositorio del ***Frontend*
 
 ✦El proyecto sigue el patrón MVC (Modelo, Vista, Controlador) para organizar su estructura y cuenta con distintos paquetes que divididos según su funcionalidad.
 
+✦Para garantizar la seguridad, se utilizo Jason Web Token para la autenticación y la gestión de permisos en base a distintos roles.
 
 ✦ Con esta estructura bien definida, el ***backend*** de mi portfolio personal garantiza un código modular, mantenible y seguro, 
 facilitando la implementación de nuevas funcionalidades y asegurando una comunicación eficiente con el ***Frontend***.
